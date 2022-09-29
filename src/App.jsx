@@ -43,8 +43,8 @@ function Text3D() {
   // useFrame(({ clock }) => (ref.current.rotation.x = ref.current.rotation.y = ref.current.rotation.z = Math.sin(clock.getElapsedTime()) * 0.3))
   return (
     <group ref={ref}>
-      <Text coordinates={[0 ,1, 0]} text="Creative" />
-      <Text coordinates={[0.5,0,0]} text="Chord"  />
+      <Text coordinates={[0 ,1, 0]} scale={[1.5 ,1, 0.1]} text="Creative" />
+      <Text coordinates={[0,0,0]} scale={[1.5 ,1, 0.1]} text="Chord"  />
 
       {/* <Text children="THREE" /> */}
 
