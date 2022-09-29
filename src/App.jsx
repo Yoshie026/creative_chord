@@ -1,11 +1,10 @@
 import React, { useRef, useState } from "react";
 import ReactDOM from "react-dom";
-import { Canvas, useFrame, useThree, useLoader } from "@react-three/fiber";
-import { Scroll, ScrollControls, useScroll, Text3D, Sky, Stars,Environment } from "@react-three/drei";
+import { Canvas, useFrame, useThree, useLoader, extend } from "@react-three/fiber";
+import { Scroll, ScrollControls, useScroll, Sky, Stars,Environment } from "@react-three/drei";
 import {config, useSpring, animated} from "@react-spring/three";
 import './App.css';
-// import Text from './components/Text'
-
+import Text from './Text';
 
 function Box(props) {
   const { width, height } = useThree((state) => state.viewport);
@@ -30,7 +29,7 @@ const {scale} = useSpring({
     onClick={()=> setClicked(!isClicked)}
     onPointerOver={()=> setHovered(true)}
     onPointerOut={()=> setHovered(false)}
-     scale={scale}>
+    scale={scale}>
       <boxBufferGeometry attach="geometry" args={[1, 1, 1]} />
       <meshStandardMaterial attach="material" color={isHovered ? "hotpink" : "black"} />
       <ambientLight intensity={0.5} />
@@ -39,22 +38,27 @@ const {scale} = useSpring({
   );
 }
 
-// function Jumbo() {
-//   const ref = useRef()
-//   useFrame(({ clock }) => (ref.current.rotation.x = ref.current.rotation.y = ref.current.rotation.z = Math.sin(clock.getElapsedTime()) * 0.3))
-//   return (
-//     <group ref={ref}>
-//       <Text hAlign="right" position={[-12, 6.5, 0]} children="THREE" />
-//       <Text hAlign="right" position={[-12, 0, 0]} children="TRES" />
-//       <Text hAlign="right" position={[-12, -6.5, 0]} children="TROIS" />
-//     </group>
-//   )
-// }
+function Text3D() {
+  const ref = useRef()
+  // useFrame(({ clock }) => (ref.current.rotation.x = ref.current.rotation.y = ref.current.rotation.z = Math.sin(clock.getElapsedTime()) * 0.3))
+  return (
+    <group ref={ref}>
+      <Text coordinates={[0 ,1, 0]} text="Creative" />
+      <Text coordinates={[0.5,0,0]} text="Chord"  />
+
+      {/* <Text children="THREE" /> */}
+
+      {/* <Text position={[-12, 0, 0]} children="TRES" />
+      <Text position={[-12, -6.5, 0]} children="TROIS" /> */}
+    </group>
+  )
+}
 
 
 function App() {
   return (
     <Canvas>
+      <Text3D />
       <ScrollControls horizontal={true} damping={3} pages={3}>
         <Scroll><Box position={[1.3,0,0]}/></Scroll>
       </ScrollControls>
