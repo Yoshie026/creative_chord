@@ -6,7 +6,10 @@ import { TextGeometry } from 'three/examples/jsm/geometries/TextGeometry';
 import {useFrame,Canvas, useThree, useLoader, extend } from "@react-three/fiber";
 
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
-import avantgarde from './components/assets/fonts/AvantGarde Bk BT_Book.json';
+import Avantgarde from './assets/fonts/AvantGarde Bk BT_Book.json';
+import Montserrat from './assets/fonts/Montserrat_Regular.json';
+import Archivo from './assets/fonts/Archivo Medium_Regular.json';
+
 import { MeshPhysicalMaterial, MeshStandardMaterial } from 'three';
 
 // const font = useLoader(FontLoader, './NeueHaasGroteskDisp Pro_Bold.json');
@@ -46,7 +49,7 @@ const CameraController = () => {
    return null;
 };
 // function Text3d(){
-   const font = new FontLoader().parse(avantgarde);
+   const font = new FontLoader().parse(Archivo);
    extend({ TextGeometry,FontLoader,OrbitControls });
    const textOptions = {
       font,
@@ -56,7 +59,7 @@ const CameraController = () => {
    return (
       <mesh position={coordinates} scale={scale}>
          <textGeometry attach='geometry' args={[text, textOptions]} />
-         <meshStandardMaterial attach='material' color="black" />
+         {/* <meshStandardMaterial attach='material' color="black" /> */}
        </mesh>
     )
     
