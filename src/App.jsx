@@ -1,16 +1,9 @@
 import React, { useRef, useState, Suspense} from "react";
-import {RawShaderMaterial,
-  Vector2, Vector3, WebGLRenderTarget,
-  OrthographicCamera,  BufferGeometry,
-  BufferAttribute} from 'three';
 import { Canvas, useFrame, useThree, useLoader, extend } from "@react-three/fiber";
 import { Scroll, ScrollControls, useScroll, Sky, Stars,Environment } from "@react-three/drei";
 import {config, useSpring, animated} from "@react-spring/three";
 import './App.css';
 // import Text from './Text';
-// import SpringIn from "./SpringIn";
-// import SpringOut from "./SpringOut";
-
 import { Scene } from './components/Scene'
 import { ShaderPass } from 'three/examples/jsm/postprocessing/ShaderPass';
 import { SobelOperatorShader } from 'three/examples/jsm/shaders/SobelOperatorShader';
@@ -154,7 +147,7 @@ const {scale} = useSpring({
 function App() {
   return (
     <Canvas>
-      <DrawLines />
+      {/* <DrawLines /> */}
       <ScrollControls horizontal={true} damping={3} pages={3}>
         <Suspense fallback={null}>
         <Scene />

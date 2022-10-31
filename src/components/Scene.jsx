@@ -25,17 +25,12 @@ function Scene() {
    return (
 
      <ScrollControls pages={3}>
-       
        <Scroll html>
-       {/* <Html /> */}
        <Headline />
- 
-         {/* <Particles /> */}
-         {/* <Objects /> */}
        </Scroll>
-       {/* <Scroll>
-       </Scroll> */}
+       <DrawLines />
      </ScrollControls>
+     
    )
  }
  
