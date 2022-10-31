@@ -104,15 +104,34 @@ const Player = ({children}) => {
       //   delay: stagger(200),
       //   translateX: stagger(100),
             //  direction: "reverse",
-            delay: 50,
+            delay: 200,
             // delay: stagger(50),
         easing: 'easeOutSine',
+        
       }
     ];
 
+// const anim2 = [
+//    {
 
+//          targets: '.atomic',
+//          points: [
+//            { value: [
+//              '70 24 119.574 60.369 100.145 117.631 50.855 101.631 3.426 54.369',
+//              '70 41 118.574 59.369 111.145 132.631 60.855 84.631 20.426 60.369']
+//            },
+//            { value: '70 6 119.574 60.369 100.145 117.631 39.855 117.631 55.426 68.369' },
+//            { value: '70 57 136.574 54.369 89.145 100.631 28.855 132.631 38.426 64.369' },
+//            { value: '70 24 119.574 60.369 100.145 117.631 50.855 101.631 3.426 54.369' }
+//          ],
+//          easing: 'easeOutQuad',
+//          duration: 2000,
+//          loop: true
+//        });
+//    }
+// ];
 
-    const yMax = 3.5;
+    const yMax = 5;
     const idlingAnimation = [
       {
          targets: ".atomic",
@@ -135,9 +154,18 @@ const Player = ({children}) => {
             }
           ],
          loop:true,
-         duration: 10000,
+         duration: 1000,
          direction:'alternate',
-         easing: 'easeInOutSine',
+         delay: stagger(200),
+         easing: 'easeInOutQuad',
+         // duration: 7500,
+         // loop: true,
+         // d: [
+         //   { value: [wave1, wave2] },
+         //   { value: wave3 },
+         //   { value: wave4 },
+         //   { value: wave1 },
+         // easing: 'easeInOutQuad',
       }
     ]
 

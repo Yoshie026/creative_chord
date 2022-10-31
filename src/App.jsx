@@ -126,28 +126,28 @@ const {scale} = useSpring({
 // }
 
 
-function DrawLines(props){
-  const { width, height } = useThree((state) => state.viewport);
-  const ref = useRef();
+// function DrawLines(props){
+//   const { width, height } = useThree((state) => state.viewport);
+//   const ref = useRef();
 
-  useFrame(()=>(ref.current.position.x += 0.075))
+//   useFrame(()=>(ref.current.position.x += 0.075))
   
-  const points = []
-  points.push(new Vector3(-width, 10, 0))
-  points.push(new Vector3(width, 10, 0))
-  // points.push(new Vector3(10, 0, 0))
+//   const points = []
+//   points.push(new Vector3(-width, 10, 0))
+//   points.push(new Vector3(width, 10, 0))
+//   // points.push(new Vector3(10, 0, 0))
 
-  const lineGeometry = new BufferGeometry().setFromPoints(points)
+//   const lineGeometry = new BufferGeometry().setFromPoints(points)
   
-  // const positions = new Float32Array(points.length * 2)
-  return (
-      <group  {...props} ref={ref} position={[0, -2.5, -10]}>
-        <line geometry={lineGeometry}>
-          <lineBasicMaterial attach="material" color={'#000'} linewidth={15} linecap={'round'} linejoin={'round'} />
-        </line>
-      </group>
-  )
-}
+//   // const positions = new Float32Array(points.length * 2)
+//   return (
+//       <group  {...props} ref={ref} position={[0, -2.5, -10]}>
+//         <line geometry={lineGeometry}>
+//           <lineBasicMaterial attach="material" color={'#000'} linewidth={15} linecap={'round'} linejoin={'round'} />
+//         </line>
+//       </group>
+//   )
+// }
 
 
 

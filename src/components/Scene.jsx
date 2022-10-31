@@ -2,7 +2,7 @@ import React, { useRef, useState} from "react";
 import * as THREE from 'three'
 
 import { Scroll, ScrollControls,Environment } from '@react-three/drei'
-import { Html } from './Html'
+import { Main,DrawLines } from './Main'
 import { Headline,SuperDiv } from './Headline'
 
 import {config, useSpring, animated} from "@react-spring/three";
