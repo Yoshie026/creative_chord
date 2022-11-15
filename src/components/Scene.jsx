@@ -1,14 +1,14 @@
+// Composition of Top, Member, Bottom
 import React, { useRef, useState} from "react";
 import * as THREE from 'three'
 
 import { Scroll, ScrollControls,Environment } from '@react-three/drei'
-import { Main,DrawLines } from './Main'
-import { Headline,SuperDiv } from './Headline'
-
 import {config, useSpring, animated} from "@react-spring/three";
 import ReactDOM from "react-dom";
 import { Canvas, useFrame, useThree, useLoader, extend } from "@react-three/fiber";
-
+import { Headline } from './Top/Header'
+import { Carousel } from './Section/Member'
+import { Footer } from './Bottom/Footer'
 
 function Scene() {
    useFrame(({ mouse, camera }) => {
@@ -26,9 +26,11 @@ function Scene() {
 
      <ScrollControls pages={3}>
        <Scroll html>
-       <Headline />
+        <Headline />
+        <Carousel />
+        <Footer />
        </Scroll>
-       <DrawLines />
+       {/* <DrawLines position={[0, -2.5, -10]}/> */}
      </ScrollControls>
      
    )

@@ -17,7 +17,7 @@ let effectSobel;
 // effectSobel.uniforms[ 'resolution' ].value.y = window.innerHeight * window.devicePixelRatio;
 // composer.addPass( effectSobel );
 
-  // useFrame(() => {
+  // useFrame(()  {=>
   //   group.current.children[0].material.color = "pink";
   //   // group.current.children[1];
   // });
@@ -148,7 +148,7 @@ function App() {
   return (
     <Canvas>
       {/* <DrawLines /> */}
-      <ScrollControls horizontal={true} damping={3} pages={3}>
+      <ScrollControls horizontal={false} damping={3} pages={3}>
         <Suspense fallback={null}>
         <Scene />
       </Suspense>
