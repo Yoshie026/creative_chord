@@ -20,12 +20,18 @@ html,body #root{
   padding: 0;
   background:'#282c340';
 }
+@font-face {
+  font-family: Akira;
+  src: url("./components/assets/fonts/Akira.otf");
+}
 
 .atomic{
   /* width:100%; */
   /* left:10vw; */
   display: flex;
-  font-size: 3vw;
+  font-size: 8vw;
+  text-align: center;
+  font-family: Akira;
 }
 .App-header {
   background-color: #282c34;
