@@ -11,7 +11,7 @@ import {
 } from 'three';
 import { Scroll, ScrollControls, useScroll, Sky, Stars, Environment } from "@react-three/drei";
 import { config, useSpring, animated } from "@react-spring/three";
-import { Nav, DarkMode } from './Nav'
+import { Nav, SubText, DarkMode } from './Nav'
 
 const { Anime, stagger } = ReactAnime;
 
@@ -107,44 +107,6 @@ const Logo = ({ children }) => {
   //    }
   //  ];
 
-  var easingNames = [
-    'easeInQuad',
-    'easeInCubic',
-    'easeInQuart',
-    'easeInQuint',
-    'easeInSine',
-    'easeInExpo',
-    'easeInCirc',
-    'easeInBack',
-    'easeOutQuad',
-    'easeOutCubic',
-    'easeOutQuart',
-    'easeOutQuint',
-    'easeOutSine',
-    'easeOutExpo',
-    'easeOutCirc',
-    'easeOutBack',
-    'easeInBounce',
-    'easeInOutQuad',
-    'easeInOutCubic',
-    'easeInOutQuart',
-    'easeInOutQuint',
-    'easeInOutSine',
-    'easeInOutExpo',
-    'easeInOutCirc',
-    'easeInOutBack',
-    'easeInOutBounce',
-    'easeOutBounce',
-    'easeOutInQuad',
-    'easeOutInCubic',
-    'easeOutInQuart',
-    'easeOutInQuint',
-    'easeOutInSine',
-    'easeOutInExpo',
-    'easeOutInCirc',
-    'easeOutInBack',
-    'easeOutInBounce',
-  ]
 
   //  const colors = ['#ff0000', '#ff4000']; 
   //  for(let i=0;i<colors.length;i++){
@@ -264,12 +226,28 @@ const Logo = ({ children }) => {
     </Anime>
   )
 }
+const DotLine = ({ color }) => (
+  <hr
+    style={{
+      color: color,
+      width: '130%',
+      borderBottom: "4px dashed",
+      borderTop: 'none',
+      marginTop: '10%',
+      marginLeft: '43.5%'
+    }}
+  />
+);
 
 const Headline = () => {
+  const logo = `Creative \n Chords`;
   return (
     <>
-      <Logo children='Creative Chords' />
+      {/* <div className='new-line'><Logo children={message} /></div> */}
+      <SubText />
+      <DotLine color='#000' />
       <Nav />
+      <div className='new-line'>{logo}</div>
       <DarkMode />
     </>
   )

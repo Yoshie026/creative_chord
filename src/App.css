@@ -18,8 +18,9 @@ html,body #root{
   height:100%;
   margin:0;
   padding: 0;
-  background:'#282c340';
+  text-align: center;
 }
+
 @font-face {
   font-family: Akira;
   src: url("./components/assets/fonts/Akira.otf");
@@ -28,21 +29,28 @@ html,body #root{
 .atomic{
   /* width:100%; */
   /* left:10vw; */
-  display: flex;
-  font-size: 8vw;
+  /* display: flex; */
+  font-size: 6vw;
   text-align: center;
   font-family: Akira;
+  transform: scaleX(0.75);
+
 }
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+
+.new-line{
+  font-size: 7vw;
+  text-align: center;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-family: Akira;
+  transform: scaleX(0.8);
+  transform: scaleY(1.5);
+  white-space: pre-line;
+  margin-left:58.5%;
+  line-height: 0.8em;
+  margin-top:8%;
 }
+
 
 
 @keyframes App-logo-spin {
