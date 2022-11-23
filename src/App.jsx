@@ -195,7 +195,7 @@ function App() {
       {/* <bloomPass  /> */}
       <glitchPass attachArray="passes" />
     </Effects>
-          <OrbitControls />
+          {/* <OrbitControls /> */}
           <gridHelper
             rotation={[0.8, 1.58, 2.26]}
             args={[160, 150, 20, "white"]}
