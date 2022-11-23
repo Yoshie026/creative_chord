@@ -112,7 +112,7 @@ small {
 }
 .Creative_name_wrapper 
 {
-  padding-top: 2vh;
+  padding-top: 3vh;
 }
 
 .Creative_profile {
@@ -134,7 +134,7 @@ small {
   justify-content: center;
   margin: 0px auto;
   width: 40% !important;
-  padding-top: 30px;
+  padding-top: 60px;
 }
 
 header , .elements > section {
