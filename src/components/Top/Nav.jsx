@@ -16,7 +16,7 @@ const Nav = () => {
          size={40}
          distance="sm"
          toggled={isOpen} toggle={setOpen}
-      // onToggle={toggled => setOpen(!isOpen)}
+      onToggle={toggled => setOpen(!isOpen)}
       />
    )
 };

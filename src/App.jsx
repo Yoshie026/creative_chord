@@ -125,7 +125,7 @@ function App() {
             FEATURED <br /> CREATIVE
           </h1>
 
-          <Carousel emulateTouch={true} infiniteLoop={true} showIndicators={false} showStatus={false} swipeable={true}>
+          <Carousel emulateTouch={true} infiniteLoop={true} showIndicators={false} showStatus={false} swipeable={false}>
           
           <div>
             <Member bkname="DPM" 
@@ -133,6 +133,7 @@ function App() {
             imageSrcAlt ='DPM'
             nameMain = 'DPM'
             introDescription = 'Bla bla'
+            company = 'AKQA'
              />
            </div> 
 
@@ -142,6 +143,7 @@ function App() {
             imageSrcAlt ='YPM'
             nameMain = 'YANA'
             introDescription = 'Bla bla'
+            company = 'AKQA'
              />
            </div> 
 

@@ -28,6 +28,7 @@ function Members(props) {
         <div className="Creative_profile">
           <img src={props.imageSrc} alt={props.imageSrcAlt} />
           <h1 className="Creative_name">{props.nameMain}</h1>
+          <small>{props.company}</small>
           <p>{props.introDescription}</p>
         </div>
       </section>
