@@ -22,32 +22,7 @@ let effectSobel;
   //   // group.current.children[1];
   // });
 
-function Box(props) {
-  const { width, height } = useThree((state) => state.viewport);
-  const ref = useRef();
-  useFrame(()=>(ref.current.rotation.x += 0.075))
 
-const [isClicked, setClicked ] = useState(false);
-const [isHovered, setHovered ] = useState(false);
-
-const {scale} = useSpring({
-  scale:isClicked ? 2 : 1,
-  config: config.wobbly
-});
-
-  return (
-    <animated.mesh {...props} ref={ref} 
-    onClick={()=> setClicked(!isClicked)}
-    onPointerOver={()=> setHovered(true)}
-    onPointerOut={()=> setHovered(false)}
-    scale={scale}>
-      <boxBufferGeometry attach="geometry" args={[1, 1, 1]} />
-      <meshStandardMaterial attach="material" color={isHovered ? "hotpink" : "black"} />
-      <ambientLight intensity={0.5} />
-      <hemisphereLight intensity={0.4} />
-    </animated.mesh>
-  );
-}
 
   // const { x } = useSpring({ x: 0, from: { x: 1 } })
   // return <a.mesh position-x={x} />
@@ -152,7 +127,7 @@ function App() {
         <Suspense fallback={null}>
         <Scene />
       </Suspense>
-        {/* <Scroll><Box position={[1.3,0,0]}/><DrawLines /></Scroll> */}
+        
       </ScrollControls>
       {/* <Sky distance={450000} // Camera distance (default=450000)
   sunPosition={[0, -1, -1]} // Sun position normal (defaults to inclination and azimuth if not set)
