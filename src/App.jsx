@@ -1,5 +1,7 @@
 import React, { useRef, useState, Suspense } from "react";
 import * as THREE from "three";
+import Member from './components/Section/Member'
+import { Nav, DarkMode } from './components/Top/Nav'
 import {
   Canvas,
   useFrame,
@@ -58,7 +60,11 @@ function App() {
         <section className="date">{date}</section>
 
         <section>
-          <p>Hamburger</p>
+          <hr />
+        </section>
+
+        <section>
+          <Nav/>
         </section>
       </header>
 
@@ -120,50 +126,26 @@ function App() {
           </h1>
 
           <Carousel emulateTouch={true} infiniteLoop={true} showIndicators={false} showStatus={false} swipeable={true}>
+          
           <div>
-              <section className="Creative">
-                <section className="Creative_name_wrapper">
-                  <div className="Creative_name_bk">
-                    <h3>DPM</h3>
-                    <h3>DPM</h3>
-                    <h3>DPM</h3>
-                  </div>
-                  <div className="Creative_name_bk">
-                    <h3>DPM</h3>
-                    <h3>DPM</h3>
-                    <h3>DPM</h3>
-                  </div>
-                  <div className="Creative_name_bk">
-                    <h3>DPM</h3>
-                    <h3>DPM</h3>
-                    <h3>DPM</h3>
-                  </div>
-                  <div className="Creative_name_bk">
-                    <h3>DPM</h3>
-                    <h3>DPM</h3>
-                    <h3>DPM</h3>
-                  </div>
-                </section>
-                <div className="Creative_profile">
-                  <img src="./images/DPM.png" alt="DPM" />
-                  <h1 className="Creative_name">DPM</h1>
-                  <p>
-                    Pellentesque imperdiet, leo sed rhoncus commodo, lorem ante
-                    sagittis justo, a congue mauris eros pellentesque dolor.
-                    Mauris in tortor malesuada, volutpat massa at, convallis
-                    urna. Sed aliquam egestas nunc eu vehicula. Mauris elementum
-                    malesuada risus, id tincidunt nisi lobortis at. Aliquam a
-                    accumsan ante, sit amet tristique purus. Etiam id
-                    sollicitudin odio, quis pulvinar augue. V estibulum
-                    efficitur dui in mauris elementum maximus. Nulla fringilla
-                    mi ac laoreet commodo. Nunc ullamcorper nulla turpis, ac
-                    aliquet enim sagittis rhoncus. Pellentesque sagittis
-                    fermentum lectus eu mattis.
-                  </p>
-                </div>
-              </section>
-            </div>
-            
+            <Member bkname="DPM" 
+            imageSrc = './images/DPM.png'
+            imageSrcAlt ='DPM'
+            nameMain = 'DPM'
+            introDescription = 'Bla bla'
+             />
+           </div> 
+
+           <div>
+            <Member bkname="YANA" 
+            imageSrc = 'https://api.readyplayer.me/v1/avatars/628de9ff49453c2dc412d2a6.png?cacheControl=true&uat=2022-08-26T11:57:38.543Z'
+            imageSrcAlt ='YPM'
+            nameMain = 'YANA'
+            introDescription = 'Bla bla'
+             />
+           </div> 
+
+
           </Carousel>
         </section>
       </main>

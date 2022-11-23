@@ -24,16 +24,22 @@
   }
 
   h1 {
-    font-size: 30px !important
+    font-size: 30px !important;
+    text-align: center;
+  }
+  h2 {
+    font-size: 30px !important;
+    text-align: center;
   }
   h3 {
     font-size: 35px !important;
+    text-align: center;
   }
 
   .Creative_name_bk {
     display: inline;
     justify-content: center;
-    line-height: 20px !;
+    line-height: 20px !important;
   }
   .Creative_name_bk h3 {
     margin: 0px !important;
@@ -50,7 +56,9 @@
 
 }
 
-  
+.Creative {
+  height: 50vh !important;
+}
 
   .Creative_profile {
     top: -200px !important;
@@ -126,8 +134,11 @@
 }
 
 header , .elements > section {
- display: flex;
- justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
 }
 
 .hr {
